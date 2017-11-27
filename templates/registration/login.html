@@ -8,22 +8,22 @@
 {% block content %}
 <div id="content">
 
-    <h1>Please Login </h1>
+    <h1>로그인 하세요 </h1>
 
     <form action="." method="post">{% csrf_token %}
 
     {% if form.errors %}
-    <p class="errornote">Wrong! Please correct the error(s) below.</p>
+    <p class="errornote">오류 발생(s) below.</p>
     {% endif %}
 
-    <p>Please enter your id and password.</p>
+    <p>당신의 ID와 Password를 입력하세요.</p>
 
     <fieldset class="aligned">
 
         <div class="form-row">
             {{ form.username.label_tag }} {{ form.username }}
         </div>
-    
+
         <div class="form-row">
             {{ form.password.label_tag }} {{ form.password }}
         </div>

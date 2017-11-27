@@ -7,37 +7,38 @@
 
 {% block content %}
 
+
 <div id="content_home">
 
     <div id="homeimg">
-        <a href="/"><img src="{% static 'img/django-actor-big.jpg' %}" style="height:256px;"/></a>
-        <h4 style="margin: 0;">This is Django powered web site.</h4>
+        <a href="/"><img src="{% static 'img/chris.jpg' %}" style="height:200px; width:900px;"/></a>
+        <h5 style="margin: 0;">2조 장고 사이트</h5>
     </div>
 
     <hr style="margin: 5px 0;">
 
-    <h2>Select Application</h2>
+    <h2>사용할 수 있는 요소들 안내</h2>
 
     <table id="applist">
         <tr>
-        <td><b><i><a href="{% url 'bookmark:index' %}">Bookmark</a></i><b></td>
-        <td>You can store your own bookmarks by Bookmark application. It's also possible to update or delete your bookmarks.</td>
-        <td class="Edit"><i><a href="{% url 'bookmark:add' %}">Add</a></i></td>
-        <td class="Edit"><i><a href="{% url 'bookmark:change' %}">Change</a></i></td>
+        <td><b><i><a href="{% url 'bookmark:index' %}">책갈피</a></i></td>
+        <td>당신의 책갈피를 업데이트 하거나 새로 저장할 수 있습니다</td>
+        <td class="Edit"><i><a href="{% url 'bookmark:add' %}">추가</a></i></td>
+        <td class="Edit"><i><a href="{% url 'bookmark:change' %}">변경</a></i></td>
         </tr>
 
         <tr>
-        <td><b><i><a href="{% url 'blog:index' %}">Blog</a></i><b></td>
-        <td>This application makes it possible to log daily events or write your own interests such as hobbies, techniques, etc.</td>
-        <td class="Edit"><i><a href="{% url 'blog:add' %}">Add</a></i></td>
-        <td class="Edit"><i><a href="{% url 'blog:change' %}">Change</a></i></td>
+        <td><b><i><a href="{% url 'blog:index' %}">블로그</a></i><b></td>
+        <td>당신 하루의 즐거운 일들을 쓰거나 저장할 수 있습니다</td>
+        <td class="Edit"><i><a href="{% url 'blog:add' %}">추가</a></i></td>
+        <td class="Edit"><i><a href="{% url 'blog:change' %}">변경</a></i></td>
         </tr>
 
         <tr>
-        <td><b><i><a href="{% url 'photo:index' %}">Photo</a></i><b></td>
-        <td>You can upload your own photos through this application. If you delete an album, all photos within it will be deleted.</td>
-        <td class="Edit"><i><a href="{% url 'photo:album_add' %}">Add</a></i></td>
-        <td class="Edit"><i><a href="{% url 'photo:album_change' %}">Change</a></i></td>
+        <td><b><i><a href="{% url 'photo:index' %}">앨범</a></i><b></td>
+        <td>이 어플을 통해 앨범에 연결할 수 있고 사진을 올릴 수 있습니다</td>
+        <td class="Edit"><i><a href="{% url 'photo:album_add' %}">추가</a></i></td>
+        <td class="Edit"><i><a href="{% url 'photo:album_change' %}">변경</a></i></td>
         </tr>
     </table>
 </div>
@@ -45,6 +46,6 @@
 
 {% block footer %}
 <div id="footer">
-    &copy; shkim 2016
+    &copy; 2조 :김상미, 박순한, 한경미
 </div>
 {% endblock footer %}

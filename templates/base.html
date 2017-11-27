@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-<title>{% block title %}Django Web Programming{% endblock %}</title>
+<title>{% block title %}2조 장고 홈페이지{% endblock %}</title>
 
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/base.css" %}{% endblock %}" />
@@ -13,47 +13,48 @@
 <body>
 
 <div id="header">
-    <h2 class="maintitle">Easy&amp;Fast Django Web Programming</h2>
+    <h2 class="maintitle">쉽고&amp;빠른 장고 걸스 웹 프로그래밍</h2>
     {% if user.is_active %}
-    <h4 class="welcome">Welcome,
+    <h4 class="welcome">어서오세요,
                 <strong>{% firstof user.get_short_name user.get_username %}</strong> /
-                <a href="{% url 'password_change' %}">Change Password</a> /
-                <a href="{% url 'logout' %}">Logout</a>
+                <a href="{% url 'password_change' %}">비밀번호 바꾸기</a> /
+                <a href="{% url 'logout' %}">로그아웃</a>
     </h4>
     {% else %}
-    <h4 class="welcome">Welcome, Anonymous /
-                <a href="{% url 'login' %}">Login</a> /
-                <a href="{% url 'register' %}">Register</a>
+    <h4 class="welcome">어서오세요 /
+                <a href="{% url 'login' %}">로그인</a> /
+                <a href="{% url 'register' %}">등록하기</a>
     </h4>
     {% endif %}
 </div>
 
 <div id="menu">
-    <li><a href="{% url 'home' %}">Home</a></li>
-    <li><a href="{% url 'bookmark:index' %}">Bookmark</a></li>
-    <li><a href="{% url 'blog:index' %}">Blog</a></li>
-    <li><a href="{% url 'photo:index' %}">Photo</a></li>
+    <button class"btn-1"><a href="{% url 'home' %}">홈</a></button>
+    <button class"btn-2"><a href="{% url 'bookmark:index' %}">책갈피</a></button>
+    <button class"btn-3"><a href="{{% url 'blog:index' %}">블로그</a></button>
+    <button class"btn-4"><a href="{% url 'photo:index' %}">앨범</a></button>
 
-    <li>Add&bigtriangledown;
+    <li><button class"btn-5">추가</button>
         <ul>
-            <li><a href="{% url 'bookmark:add' %}">Bookmark</a></li>
-            <li><a href="{% url 'blog:add' %}">Post</a></li>
-            <li><a href="{% url 'photo:album_add' %}">Album</a></li>
-            <li><a href="{% url 'photo:photo_add' %}">Photo</a></li>
-        </ul>
-    </li>
-    <li>Change&bigtriangledown;
-        <ul>
-            <li><a href="{% url 'bookmark:change' %}">Bookmark</a></li>
-            <li><a href="{% url 'blog:change' %}">Post</a></li>
-            <li><a href="{% url 'photo:album_change' %}">Album</a></li>
-            <li><a href="{% url 'photo:photo_change' %}">Photo</a></li>
+            <li><a href="{% url 'bookmark:add' %}">책갈피</a></li>
+            <li><a href="{% url 'blog:add' %}">새 글</a></li>
+            <li><a href="{% url 'photo:album_add' %}">사진앨범</a></li>
+            <li><a href="{% url 'photo:photo_add' %}">사진</a></li>
         </ul>
     </li>
 
-    <li><a href="{% url 'blog:post_archive' %}">Archive</a></li>
-    <li><a href="{% url 'blog:search' %}">Search</a></li>
-    <li><a href="{% url 'admin:index' %}">Admin</a></li>
+    <li><button class"btn-6">변경</button>
+        <ul>
+            <li><a href="{% url 'bookmark:change' %}">책갈피</a></li>
+            <li><a href="{% url 'blog:change' %}">새 글</a></li>
+            <li><a href="{% url 'photo:album_change' %}">사진앨범</a></li>
+            <li><a href="{% url 'photo:photo_change' %}">사진</a></li>
+        </ul>
+    </li>
+    <button class"btn-7"><a href="{% url 'blog:post_archive' %}">기록</a></button>
+    <button class"btn-8"><a href="{% url 'blog:search' %}">검색</a></button>
+    <button class"btn-9"><a href="{% url 'admin:index' %}">가입</a></button>
+
 </div>
 
 {% block content %}{% endblock %}

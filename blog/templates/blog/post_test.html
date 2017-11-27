@@ -5,8 +5,8 @@
 {% block content %}
 <div id="content">
 
-{# <h1>Blog List - test</h1> #}
-<h1>Blog List - contains the word '{{ SearchWord }}'</h1>
+{# <h1>글 목록 - 테스트</h1> #}
+<h1>글 목록 - 다음 단어가 포함된 '{{ SearchWord }}'</h1>
 
 {% for post in posts %}
     <h2><a href='{{ post.get_absolute_url }}'>{{ post.title }}</a></h2>
@@ -19,13 +19,13 @@
 <div>
     <span>
         {% if page_obj.has_previous %}
-            <a href="?page={{ page_obj.previous_page_number }}">PreviousPage</a>
+            <a href="?page={{ page_obj.previous_page_number }}">이전 페이지</a>
         {% endif %}
-      
+
         Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
-      
+
         {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">NextPage</a>
+            <a href="?page={{ page_obj.next_page_number }}">다음 페이지</a>
         {% endif %}
     </span>
 

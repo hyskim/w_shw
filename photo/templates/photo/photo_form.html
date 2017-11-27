@@ -8,7 +8,7 @@
 {% block content %}
 <div id="content">
 
-    <h1>Photo Create/Update - {{user}}</h1>
+    <h1>사진 만들기와 올리기 - {{user}}</h1>
 
     {% if form.is_multipart %}
     <form enctype="multipart/form-data" method="post" action=".">
@@ -18,10 +18,10 @@
     {% csrf_token %}
 
     {% if form.errors %}
-    <p class="errornote">Wrong! Please correct the error(s) below.</p>
+    <p class="errornote">에러발생!</p>
     {% endif %}
 
-    <p>This is a creation or update form for your photo.</p>
+    <p>너의 사진들을 올려</p>
 
     <fieldset class="aligned">
 
@@ -31,9 +31,9 @@
 
         <div class="form-row">
             {{ form.album.label_tag }} {{ form.album }}
-            <button type="button"><a href="{% url 'photo:album_add' %}">Add Album</a></button>
+            <button type="button"><a href="{% url 'photo:album_add' %}">앨범 추가</a></button>
         </div>
-    
+
         <div class="form-row">
             {{ form.title.label_tag }} {{ form.title }}
         </div>
