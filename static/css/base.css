@@ -1,0 +1,185 @@
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+
+body {
+    font-family: 'Hanna', Verdana, Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* PAGE STRUCTURE */
+div#header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50px;
+    width: 100%;
+    display: table;
+    background:#D03024;
+    font-family: 'Hanna', serif;
+    font-size: 30em;
+    text-align: right;
+
+}
+
+div#menu {
+    position: relative;
+    top: 40px;
+    left: 0px;
+    height: 30px;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    border-spacing: 40px 0px;
+    background: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+div#content {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    right: 50px;
+    margin-top: 50px;
+}
+
+div#footer {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    right: 50px;
+    height: 30px;
+    border-top:1px solid #ccc;
+}
+
+/* HEADER */
+.maintitle {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
+    color: #ffc;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.welcome {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 20px;
+    color: #ffc;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.welcome a:link, .welcome a:visited {
+    color: white;
+}
+
+/* MENU */
+div#menu a:link, div#menu a:visited {
+    color: #FDFCFC;
+
+}
+body:before{
+  content:'';
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}
+button{
+  font-family: 'Nanum Brush Script', serif;
+  font-size: 30px;
+  background:#388233;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:40px;
+  font-size:15px;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:#388233;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #388233;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+
+/* pulldown menu */
+div#menu li  ul {
+    display:none;
+    position:absolute;
+    margin: 0;
+    padding:10px 10px 5px 10px;
+    list-style:none;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #569A4C;
+    z-index: 1;
+}
+
+div#menu li:hover ul {
+    display:block;
+
+}
+
+/* LINK */
+a:link, a:visited {
+    color: #369;
+    text-decoration: none;
+
+}
+
+a:hover {
+    text-decoration: underline;
+
+}
+
+/* TABLE */
+table {
+    border-collapse: collapse;
+
+}
+
+td, th {
+    line-height: 18px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    padding: 5px 15px;
+    font-family: 'Nanum Brush Script', Verdana, Arial, sans-serif;
+}
+
+table.change-list, table.change-list th, table.change-list td {
+    border: 1px solid #ccc;
+}
+li {
+  list-style-type: none;
+  display: inline-block;
+  font-family: 'Nanum Brush Script', serif;
+
+}

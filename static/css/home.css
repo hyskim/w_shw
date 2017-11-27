@@ -1,0 +1,16 @@
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+div#content_home {
+    font-family: 'Hanna', serif;
+    position: absolute;
+    top: 120px;
+    left: 110px;
+    right: 110px;
+    font-size: 13px;
+
+}
+
+div#homeimg {
+    background: #fff;
+    padding: 5px 0 1px 0;
+    text-align: center;
+}
